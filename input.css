@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=Oswald:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+
+
+@tailwind utilities;
+
+@layer base{
+    html{
+        @apply scroll-smooth;
+    }
+    body{
+        @apply text-whiteColor bg-primaryColorLight tracking-wider font-dmsans dark:bg-blackColor;
+    }
+    section{
+        @apply pt-16 mb-4 md:pt-20;
+    }
+}
+
+
+@layer components{
+    .btn{
+        @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200;
+    }
+    .btn-primary{
+        @apply text-black bg-secondaryColor hover:opacity-70;
+    }
+}
+
+
+
+@layer utilities{
+    .home_title, .card__title{
+        @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
+    }
+
+    .card__title{
+        @apply text-xl
+    }
+
+    .separeetor{
+        @apply w-28 h-[2px] bg-secondaryColor my-5;
+    }
+
+    .paragraph{
+        @apply text-paragraphColor text-xs leading-5;
+    }
+    .section__title{
+        @apply text-3xl font-oswald;
+    }
+
+}
+
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active{
+    @apply bg-secondaryColor text-black;
+}
+
+
